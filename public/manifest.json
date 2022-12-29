@@ -1,0 +1,25 @@
+{
+  "short_name": "Avtogavan",
+  "name": "Avtogavan company",
+  "icons": [
+    {
+      "src": "avtogavan.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo1.png",
+      "type": "image/png",
+      "sizes": "192x148"
+    },
+    {
+      "src": "logo2.png",
+      "type": "image/png",
+      "sizes": "512x395"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,177 @@
+body
+    color: #212121
+    font-family: Roboto, sans-serif
+    margin: 0
+    padding: 0
+.app
+    background: #dcdcdc
+    position: relative
+    font-size: 60px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    min-height: 100vh
+    &__inner
+        display: flex
+        justify-content: center
+        text-align: center
+        margin: 0px auto
+        margin-top: 30px
+        height: 100px
+        min-height: 100px
+        max-height: 100px
+        width: 150px
+        max-width: 150px
+        min-width: 150px
+        &__logo
+            height: 100px
+            min-height: 100px
+            max-height: 100px
+            width: 150px
+            max-width: 150px
+            min-width: 150px
+
+.wrapBtn
+    width: 30%
+    display: flex
+    flex-direction: column
+    margin-top: 50px
+    justify-content: center
+    background:  #181818
+    border-radius: 33px
+    padding: 20px 37px   
+    padding-bottom: 5px
+    &__title
+        font-family: 'Balsamiq Sans', cursive
+        font-size: 26px
+        text-align: center
+        margin-top: 7px
+        margin-bottom: 22px
+        margin-left: auto
+        margin-right: auto
+        color: #ffff
+        text-align: center
+    &__btn
+        text-decoration: none
+        color: #212121
+        background: #ffffff
+        border-radius: 7px
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px
+        padding: 15px 13px 
+        margin-bottom: 16px
+        font-size: 22px
+        &__inner
+            display: flex
+            align-items: center
+        &__img
+            text-decoration: none
+            height: 50px
+            min-height: 50px
+            max-height: 50px
+            width: 50px
+            max-width: 50px
+            min-width: 50px
+        &__title
+            margin-left: 30px
+     
+    &__tell
+        font-weight: 400
+        font-size: 25px
+        font-weight: 600
+        color: #212121
+        text-decoration: none
+        background: #ffffff
+        border-radius: 7px
+        font-family: 'Roboto', sans-serif
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px    
+        padding: 15px 13px 
+        margin-bottom: 12px
+        &__wrap
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: left
+            margin: 16px auto
+            line-height: 25px
+            margin-bottom: 24px
+        &__title
+            margin-left: 30px
+            color: #ffffff
+            font-size: 30px
+            letter-spacing: .9px
+
+        &__subtitle
+            font-weight: 300
+            color: #e6e6e6
+            font-size: 16px     
+            letter-spacing: .9px
+            font-family: "Roboto",  sans-serif
+        &__img
+            display: block
+            text-decoration: none
+            height: 90px
+            min-height: 90px
+            max-height: 90px
+            border-radius: 50%
+            width: 90px
+            max-width: 90px
+            min-width: 90px
+
+.title
+    font-size: 25px
+    font-weight: 400
+    text-align: center
+    margin: 0 15px
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 2%
+    white-space: nowrap
+    font-family: 'Balsamiq Sans', cursive
+
+@media screen and (max-width: 1282px) 
+    .wrapBtn
+        width: 86%
+
+@media screen and (max-width: 992px) 
+    .app
+        padding-bottom: 70px
+    .wrapBtn
+        padding: 20px 26px
+        margin-top: 16px
+        &__btn
+            padding: 10px 8px
+            &__img
+                height: 38px
+                min-height: 38px
+                max-height: 38px
+                width: 38px
+                max-width: 38px
+                min-width: 38px
+        &__tell
+            font-size: 22px
+            padding: 10px 8px
+
+@media screen and (max-width: 580px) 
+    .title
+        font-size: 23px
+
+@media screen and (max-width: 412px) 
+    .wrapBtn
+        margin-top: 50px
+    .title
+        bottom: 5%
+    .app
+        padding-bottom: 5px
+
+
+@media screen and (max-width: 375px) 
+    .wrapBtn
+        margin-top: 12px
+    .app
+        padding-bottom: 70px
+    .title
+        bottom: 2%
+
+    
