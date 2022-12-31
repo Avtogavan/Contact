@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/Contact/static/css/main.170f911c.css",
-    "main.js": "/Contact/static/js/main.f2a604d0.js",
+    "main.css": "/Contact/static/css/main.d497f2c8.css",
+    "main.js": "/Contact/static/js/main.bc02852f.js",
     "static/js/787.ee95881d.chunk.js": "/Contact/static/js/787.ee95881d.chunk.js",
     "static/media/logo1.png": "/Contact/static/media/logo1.700bd99984345ccfae5a.png",
     "static/media/instagram.png": "/Contact/static/media/instagram.8e408da00539cdef4629.png",
+    "static/media/my.jpg": "/Contact/static/media/my.0425fb9cc6c1d9303368.jpg",
+    "static/media/m.jpg": "/Contact/static/media/m.a16c994828e3662bb298.jpg",
     "static/media/f.jpg": "/Contact/static/media/f.dc80dea1803015be18c3.jpg",
     "static/media/telegram.png": "/Contact/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/whatsapp.png": "/Contact/static/media/whatsapp.c2d441e6945db7e7943b.png",
     "index.html": "/Contact/index.html",
-    "main.170f911c.css.map": "/Contact/static/css/main.170f911c.css.map",
-    "main.f2a604d0.js.map": "/Contact/static/js/main.f2a604d0.js.map",
+    "main.d497f2c8.css.map": "/Contact/static/css/main.d497f2c8.css.map",
+    "main.bc02852f.js.map": "/Contact/static/js/main.bc02852f.js.map",
     "787.ee95881d.chunk.js.map": "/Contact/static/js/787.ee95881d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.170f911c.css",
-    "static/js/main.f2a604d0.js"
+    "static/css/main.d497f2c8.css",
+    "static/js/main.bc02852f.js"
   ]
 }
