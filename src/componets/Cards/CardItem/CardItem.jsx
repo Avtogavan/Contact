@@ -4,6 +4,7 @@ import s from './CardItem.module.sass'
 import whatsapp from '../../../img/whatsapp.png'
 import telegram from '../../../img/telegram.png'
 import instagram from '../../../img/instagram.png'
+import profile from '../../../img/profile.png'
 
 export default function CardItem({ namePerson, position, image, inst, phone, id, main }) {
 
@@ -12,7 +13,7 @@ export default function CardItem({ namePerson, position, image, inst, phone, id,
         <>
             <div className={s.wrapBtn__tell__wrap}>
                 <div>
-                    <img src={image} alt="" className={s.wrapBtn__tell__img}/>
+                    <img src={image !== '' ? image : profile } alt="" className={s.wrapBtn__tell__img}/>
                 </div>
                 <div className={s.wrapBtn__tell__title}>
 

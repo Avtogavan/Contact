@@ -24,9 +24,33 @@ export const CardsData = [
 
     {   
         id: '3',
-        namePerson: 'Иван' ,
-        position: 'Разраб',
-        image: my,
+        namePerson: 'ty' ,
+        position: 'Директор',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: '4',
+        namePerson: 'a' ,
+        position: 'Заместитель директора',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: '5',
+        namePerson: 'b' ,
+        position: 'Бухгалтер',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: '6',
+        namePerson: 'c' ,
+        position: 'Отдел запчастей',
+        image: '',
         inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },

@@ -1,21 +1,73 @@
-@mixin fade-in
-    opacity: 1
-    animation-name: fade
-    animation-iteration-count: 1
-    animation-timing-function: ease-in
-    animation-duration: .6s
+.card
+    height: auto
+    margin: 0 auto
+    &__wrap
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        position: relative
+        &__slider
+            overflow: auto
+            margin: 0 auto
+            text-align: center
+            transition: all .4s ease-in-out
+            display: flex
 
-.wrapper
-    display: flex
-    flex-direction: column
-    @include fade-in
-    
+            &__wrapBtn
+                display: flex
+                align-items: center
+                justify-content: center
 
+            &__btn
+                display: block
+                background: transparent
+                border: 0
+                outline: 0
+                cursor: pointer
+                
+                &__left
+                    display: flex
+                    align-items: center
+                    justify-content: center   
+                    position: absolute 
+                    top: 20px    
+                    left: 250px
+                &__right
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    position: absolute
+                    top: 20px
+                    right: 250px  
+                                  
+                // &__active
+                //     opacity: 1
+                //     animation-name: op1
+                //     animation-iteration-count: 1
+                //     animation-timing-function: ease-in-out 
+                //     animation-duration: .4s           
+                //     text-decoration: none
+                // &__disactive
+                //     opacity: 0
+                //     animation-name: op
+                //     animation-iteration-count: 1
+                //     animation-timing-function: ease-in-out 
+                //     animation-duration: .4s           
+                //     text-decoration: none
+                
+// @keyframes op
 
-@keyframes fade
+//     0%
+//         opacity: 0
 
-    0% 
-        opacity: 0
-    
-    100% 
-        opacity: 1
+//     100%  
+//         opacity: 1  
+
+// @keyframes op1
+
+//     0%
+//         opacity: 1
+
+//     100%  
+//         opacity: 0  
+

@@ -1,12 +1,22 @@
 .switch 
+    z-index: 20
     display: flex
     align-items: center
-    justify-content: center
+    justify-content: start
     gap: 14px
     margin: 13px 10px
+    width: 330px
+    transition: transform .2s ease-in-out
+
+    &__active
+
     &__link
         text-decoration: none
+        transition: transform .2s ease-in-out
+       
     &__btn
+        width: auto
+        min-width: 100px
         padding: 9px 6px
         font-weight: 300
         line-height: 24px
@@ -15,8 +25,8 @@
         font-family: 'Balsamiq Sans', cursive
         cursor: pointer
         border-bottom: 2px solid transparent  
-        text-decoration: none     
-        transition: all .4s ease-out
+        text-decoration: none    
+        margin: 0 6px 
         &__active
             animation-name: br
             animation-iteration-count: 1
