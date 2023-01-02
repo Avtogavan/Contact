@@ -1,30 +1,22 @@
 import React from 'react'
 import s from './Switch.module.sass'
 import { CardsData } from './../CardsData';
+import Carousel from '../Carousel/Carousel';
+import SwitchBtn from './SwitchBtn';
 import { NavLink } from 'react-router-dom';
 
-export default function Switch({main, setMain}) {
+export default function Switch(props) {
 
-        const SwitchBtn = ({position, id}) => {
-        
-            return (
-                <NavLink to={'./Contact/' } className={s.switch__link}>     
-                    <div className={main === id ? `${s.switch__btn__active} ${s.switch__btn}` : `${s.switch__btn}` } 
-                        onClick={()=> setMain(id)}
-                    >
-                        {position}
-                    </div>
-                </NavLink>
-            )
-        }
-
-  return (
-    <div className={s.switch}>
-        { 
-            CardsData.map( (e, i)=>
-                <SwitchBtn key={i} id={e.id}  position={e.position}/>
-            )
-        }
-    </div>
+    return (
+   
+    <>
+    { CardsData.map((e, i) => 
+            <div className={s.switch} key={i} style={props.style}>
+                <SwitchBtn id={e.id} activebtn={props.activebtn} setarr={props.setarr} main={props.main} setmain={props.setmain} position={e.position}/>
+            </div>
+        )
+    }
+    </>
+    
   )
 }
