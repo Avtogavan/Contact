@@ -2,9 +2,11 @@ import React, {useState, useEffect, cloneElement, Children} from 'react'
 import './Carousel.sass'
 import usePropsChildren from './usePropsChildren';
 
-export default function Carousel({children, main, setmain, id}) {
+const PAGE_WIDTH = 179
 
-    const [pages, setPages] = useState([])
+export default function Carousel({children, main, setmain, id, offset, pages, setPages}) {
+
+    
 
     const addProps = usePropsChildren(pages, {main, setmain, id})
 
@@ -13,9 +15,11 @@ export default function Carousel({children, main, setmain, id}) {
             Children.map(children, child => {
                 return cloneElement(child, {
                     style: {
-                        height: '100%',
-                        // maxWidth: '100%',
-                        // minWidth: '100%',
+                        minHeight: '100%',
+                        maxWidth: `${PAGE_WIDTH}px`,
+                        minWidth: `${PAGE_WIDTH}px`,
+                        background: '#000',
+                        
 
                     
                     }, 
@@ -36,12 +40,12 @@ export default function Carousel({children, main, setmain, id}) {
     }, [])
 
   return (
-    <div className="main-container">
-      <div className="window">
-        <div className="all-pages-container">
-            {addProps}
+        <div className="main-container">                    
+            <div className="window">
+                <div className="all-pages-container" style={{transform: `translateX(${offset}px)`}}>
+                    {addProps}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
   )
 }
