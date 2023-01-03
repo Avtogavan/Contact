@@ -11,21 +11,21 @@ export default function Cards() {
 
   const [main, setmain] = useState('1')  
 
-  const [offset, setOffset] = useState('1')  
+  const [offset, setOffset] = useState(0)  
 
   const [pages, setPages] = useState([])
 
   const onLeftClick = () => {
     setOffset((currentOffset)=> {
-      const newOffset = currentOffset + 185
+      const newOffset = currentOffset + 125
       return Math.min(newOffset, 0)
     })
   }
 
   const onRightClick = () => {
       setOffset((currentOffset)=> {
-        const newOffset = currentOffset - 185
-        const maxOffset = -(185 * (pages.length + 3))
+        const newOffset = currentOffset - 125
+        const maxOffset = -(125 * (pages.length + 4))
         return Math.max(newOffset, maxOffset)
       })
   }

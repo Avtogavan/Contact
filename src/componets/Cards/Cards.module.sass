@@ -7,10 +7,12 @@
         margin: 0 auto
         position: relative
         &__slider
-            overflow-x: auto !important
             margin: 0 auto
             text-align: center
             display: flex
+            overflow: auto 
+            &::-webkit-scrollbar
+                display: none
             &__wrapBtn
                 display: flex
                 align-items: center

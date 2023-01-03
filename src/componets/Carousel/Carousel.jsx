@@ -2,7 +2,7 @@ import React, {useState, useEffect, cloneElement, Children} from 'react'
 import './Carousel.sass'
 import usePropsChildren from './usePropsChildren';
 
-const PAGE_WIDTH = 179
+const PAGE_WIDTH = 130
 
 export default function Carousel({children, main, setmain, id, offset, pages, setPages}) {
 
@@ -15,10 +15,10 @@ export default function Carousel({children, main, setmain, id, offset, pages, se
             Children.map(children, child => {
                 return cloneElement(child, {
                     style: {
-                        minHeight: '100%',
+                        height: '100%',
                         maxWidth: `${PAGE_WIDTH}px`,
                         minWidth: `${PAGE_WIDTH}px`,
-                        background: '#000',
+                        // background: '#000',
                         
 
                     
