@@ -4,9 +4,7 @@ import usePropsChildren from './usePropsChildren';
 
 const PAGE_WIDTH = 130
 
-export default function Carousel({children, main, setmain, id, offset, pages, setPages}) {
-
-    
+export default function Carousel({children, main, setmain, id, offset, setOffset, pages, setPages}) {
 
     const addProps = usePropsChildren(pages, {main, setmain, id})
 
@@ -17,11 +15,7 @@ export default function Carousel({children, main, setmain, id, offset, pages, se
                     style: {
                         height: '100%',
                         maxWidth: `${PAGE_WIDTH}px`,
-                        minWidth: `${PAGE_WIDTH}px`,
-                        // background: '#000',
-                        
-
-                    
+                        minWidth: `${PAGE_WIDTH}px`
                     }, 
                     activebtn:  {
                         animationName: 'br',

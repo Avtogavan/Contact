@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { CardsData } from '../CardsData'
 import CardItem from './CardItem/CardItem'
 import s from './Cards.module.sass'
@@ -9,58 +9,30 @@ import Carousel from '../Carousel/Carousel'
 
 export default function Cards() {
 
-  const [main, setmain] = useState('1')  
+  const [main, setmain] = useState(0)  
 
-  const [offset, setOffset] = useState(0)  
-
-  const [pages, setPages] = useState([])
-
-  const onLeftClick = () => {
-    setOffset((currentOffset)=> {
-      const newOffset = currentOffset + 125
-      return Math.min(newOffset, 0)
-    })
-  }
-
-  const onRightClick = () => {
-      setOffset((currentOffset)=> {
-        const newOffset = currentOffset - 125
-        const maxOffset = -(125 * (pages.length + 4))
-        return Math.max(newOffset, maxOffset)
-      })
-  }
-
+  
 
 return (
-    <>        
-       <BrowserRouter>
-       <div className={s.cards}>
-          <div className={s.card__wrap} > 
+      
+      <BrowserRouter>
+        <div className={s.card}>
+          <div className={s.card__wrap}> 
+          
+              <Switch 
+                 
+                  setmain={setmain}  
+                  main={main}
+              />
+
             <Routes>
-          <>
-                {
+              <> 
+                { 
                   CardsData.filter((e)=> e.id === main ).map((e, i) => 
                       <Route
                         key={i}
                         path={'*'} 
-                        element={
-                            <> 
-                              <div className={s.card__wrap__slider__wrapBtn}>
-                                      <button onClick={onLeftClick} className={`${s.card__wrap__slider__btn} ${s.card__wrap__slider__btn__left}`}>
-                                          <BtnNav navig='f'/>
-                                      </button>
-                                    
-                                      <button onClick={onRightClick} className={`${s.card__wrap__slider__btn} ${s.card__wrap__slider__btn__right}`}>
-                                          <BtnNav/>
-                                      </button>
-                                  </div>
-                             
-                                <div className={s.card__wrap__slider} >
-                                  <Carousel id={e.id} main={main} pages={pages} setPages={setPages} setmain={setmain} offset={offset} setOffset={setOffset}>
-                                    <Switch />
-                                  </Carousel>
-                                
-                                </div>
+                        element={ 
                                 <CardItem 
                                   namePerson={e.namePerson}
                                   position={e.position}
@@ -70,20 +42,18 @@ return (
                                   id={e.id}
                                   main={main}
                                 />                         
-                            </>
                         }
                       />
                     )
                 }
 
          
-          </>     
-        </Routes>
+              </>     
+            </Routes>
+          </div>
         </div>
-              </div>
-        </BrowserRouter>
+      </BrowserRouter>
 
-    </>
   )
 
 }

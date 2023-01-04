@@ -5,7 +5,7 @@ import my from '../img/my.jpg'
 export const CardsData = [
 
     {   
-        id: '1',
+        id: 0,
         namePerson: 'Фарид' ,
         position: 'Главный механик',
         image: f,
@@ -14,7 +14,7 @@ export const CardsData = [
     },
 
     {   
-        id: '2',
+        id: 1,
         namePerson: 'Филипп' ,
         position: 'Менеджер',
         image: m,
@@ -23,7 +23,7 @@ export const CardsData = [
     },
 
     {   
-        id: '3',
+        id: 2,
         namePerson: 'ty' ,
         position: 'Директор',
         image: '',
@@ -31,7 +31,7 @@ export const CardsData = [
         phone: '89069681028' 
     },
     {   
-        id: '4',
+        id: 3,
         namePerson: 'a' ,
         position: 'Заместитель директора',
         image: '',
@@ -39,7 +39,7 @@ export const CardsData = [
         phone: '89069681028' 
     },
     {   
-        id: '5',
+        id: 4,
         namePerson: 'b' ,
         position: 'Бухгалтер',
         image: '',
@@ -47,7 +47,7 @@ export const CardsData = [
         phone: '89069681028' 
     },
     {   
-        id: '6',
+        id: 5,
         namePerson: 'c' ,
         position: 'Отдел запчастей',
         image: '',

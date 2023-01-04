@@ -1,20 +1,36 @@
+
+.slider
+    text-align: center
+    display: flex
+    margin-top: 55px
+    overflow-x: auto
+    width: 340px
+    height: calc( 15vh - 2px)
+    margin: auto
+
+.mainCon
+    display: flex
+    align-items: flex-end
+    width: 90%
+    height: 100%
+
 .switch 
     z-index: 20
     display: flex
-    align-items: flex-end
+    align-items: center
     justify-content: center
-    // gap: 14px
-    margin: 13px 0px
- 
+    margin: 13px 10px
     transition: transform .2s ease-in-out
-    margin-bottom: 25px
+    min-width: 100%
     &__active
 
     &__link
         text-decoration: none
         transition: transform .2s ease-in-out
-       
+        
     &__btn
+        text-decoration: none
+        transition: transform .2s ease-in-out
         width: 100px
         min-width: 100px
         padding: 9px 6px
@@ -27,6 +43,7 @@
         border-bottom: 2px solid transparent  
         text-decoration: none    
         margin: 0 6px 
+        
         &__active
             animation-name: br
             animation-iteration-count: 1

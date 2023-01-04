@@ -4,11 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 export default function SwitchBtn(props) {
 
+    const scrollToIndex = (event) => {
+        const navLi = event.target.parentNode;
+        const index = props.getElementIndex(navLi);
+        props.setmain(index)
+    };
+
   return (
-        <NavLink to={'./Contact/' } className='switch__link' style={props.style}>     
-            <div className={'switch__btn'}  
-                style={props.main === props.id ? props.activebtn : undefined}
-                onClick={()=> props.setmain(props.id)}
+        <NavLink to={'/'} className='switch__link' >     
+            <div className={ props.main === props.i ? 'switch__btn__active switch__btn' : 'switch__btn'}  
+                onClick={scrollToIndex}
             >
                 {props.position}
             </div>
