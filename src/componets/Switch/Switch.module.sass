@@ -2,21 +2,21 @@
 .slider
     text-align: center
     display: flex
-    // margin-top: 55px
     overflow-x: scroll
     width: 340px
-    // height: calc( 15vh - 2px)
-    margin: 0 auto
+    height: calc( 15vh - 2px)
+    background:  #181818
+    margin: 25px auto
     &::-webkit-scrollbar
         display: none
 
 .mainCon
     display: flex
     align-items: flex-end
-    padding: 0 10px
-    width: calc( 50% + 60px)
-    height: auto
-
+    margin: 0 10px
+    width: calc( 30% + 60px)
+    height: 100px
+   
 .switch 
     z-index: 20
     display: flex
@@ -25,9 +25,10 @@
     margin: 13px 30px
     transition: transform .2s ease-in-out
     min-width: 100%
-    
-    &__active
-
+    &:nth-child(6)
+        padding-right: 100px
+ 
+            
     &__link
         text-decoration: none
         transition: transform .2s ease-in-out
@@ -47,6 +48,7 @@
         border-bottom: 2px solid transparent  
         text-decoration: none    
         margin: 0 6px 
+        white-space: nowrap
         
         &__active
             animation-name: br
@@ -72,3 +74,13 @@
 
     100%
         border-bottom: 2px solid #0697f1
+
+@media screen and (max-width: 992px)
+
+    .switch__btn
+        white-space: normal
+
+@media screen and (max-width: 400px)
+
+    .mainCon
+        width: calc( 26% + 60px)

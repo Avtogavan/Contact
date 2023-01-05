@@ -1,6 +1,5 @@
 import f from '../img/f.jpg'
 import m from '../img/m.jpg'
-import my from '../img/my.jpg'
 
 export const CardsData = [
 
