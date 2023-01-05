@@ -16,7 +16,8 @@ export default function Switch({setmain, main, top}) {
     const scrollHandler = () => {
       if (!scrollNavRefs.current) return
       const rectNav = scrollNavRefs.current.getBoundingClientRect();
-      const el = document.elementFromPoint(rectNav.width / 2, rectNav.height + 200)
+      const el = document.elementFromPoint(rectNav.width  * 1 , rectNav.height + 50)
+      console.log(el);
       if(!el || el.tagName !== 'SECTION') return
       const newIndex =  getElementIndex(el)
       const rect = el.getBoundingClientRect();
@@ -25,7 +26,6 @@ export default function Switch({setmain, main, top}) {
 
     const scrollToIndex = (event) => {
         const navLi = event.target.parentNode;
-        console.log(navLi);
         const index = getElementIndex(navLi);
         setmain(index)
     };
@@ -43,7 +43,7 @@ export default function Switch({setmain, main, top}) {
                             <section className={s.switch} key={i} id={`${i}`} >
                                 
                                 <a href={`#${i}`} id='Rout' className={s.switchWrap}  
-                                    onClick={scrollToIndex}
+                                    // onClick={scrollToIndex}
                                 >
 
                                   <span className={ main === i ? `${s.switch__btn__active} ${s.switch__btn}` : `${s.switch__btn}`}>
