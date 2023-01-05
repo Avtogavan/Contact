@@ -2,31 +2,28 @@
 .slider
     text-align: center
     display: flex
+    // flex-direction: column
     overflow-x: scroll
-    width: 340px
-    height: calc( 15vh - 2px)
+    width: 100%
+    height: calc( 75vh - 2px)
     background:  #181818
-    margin: 25px auto
+    margin: 0 auto
     &::-webkit-scrollbar
         display: none
 
-.mainCon
-    display: flex
-    align-items: flex-end
-    margin: 0 10px
-    width: calc( 30% + 60px)
-    height: 100px
-   
+.switchWrap
+    text-decoration: none
+    
 .switch 
     z-index: 20
     display: flex
     align-items: center
     justify-content: center
-    margin: 13px 30px
+    margin: 0px 10px
     transition: transform .2s ease-in-out
     min-width: 100%
-    &:nth-child(6)
-        padding-right: 100px
+    // &:nth-child(6)
+    //     padding-right: 100px
  
             
     &__link
@@ -81,6 +78,9 @@
         white-space: normal
 
 @media screen and (max-width: 400px)
+    .slider
+        height: calc( 65vh - 2px)
 
-    .mainCon
-        width: calc( 26% + 60px)
+    .switch
+        margin-top: 180px
+        

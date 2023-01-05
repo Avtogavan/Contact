@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import s from './Switch.module.sass'
-import { CardsData } from './../CardsData';
+import { CardsData } from '../CardsData'
+import CardItem from '../Cards/CardItem/CardItem'
+import { Routes, Route, BrowserRouter, NavLink } from 'react-router-dom'
 
 export default function Switch({setmain, main, top}) {
 
@@ -14,7 +16,7 @@ export default function Switch({setmain, main, top}) {
     const scrollHandler = () => {
       if (!scrollNavRefs.current) return
       const rectNav = scrollNavRefs.current.getBoundingClientRect();
-      const el = document.elementFromPoint(rectNav.width / 2, rectNav.height + 205)
+      const el = document.elementFromPoint(rectNav.width / 2, rectNav.height + 200)
       if(!el || el.tagName !== 'SECTION') return
       const newIndex =  getElementIndex(el)
       const rect = el.getBoundingClientRect();
@@ -29,23 +31,56 @@ export default function Switch({setmain, main, top}) {
     };
 
     return (
-
+      <BrowserRouter>
         <div className={s.slider} ref={scrollNavRefs} onScroll={scrollHandler}  >  
-            <div className={s.mainCon}>
-                { 
-                    CardsData.map((e, i) => 
-                        <section className={s.switch} key={i} id={`${i}`} >
-                             
-                                <a href={`#${i}`} className={ main === i ? `${s.switch__btn__active} ${s.switch__btn}` : `${s.switch__btn}`}  
+            <>     
+            
+                <>
+                  
+                    { 
+                        CardsData.map((e, i) => 
+                        
+                            <section className={s.switch} key={i} id={`${i}`} >
+                                
+                                <a href={`#${i}`} id='Rout' className={s.switchWrap}  
                                     onClick={scrollToIndex}
                                 >
+
+                                  <span className={ main === i ? `${s.switch__btn__active} ${s.switch__btn}` : `${s.switch__btn}`}>
                                     {e.position}
+                                  </span>
+                                    <Routes>
+
+                                        { 
+                                          
+                                          <Route
+                                              key={i}
+                                              path={'*'} 
+                                              element={ 
+                                                <CardItem 
+                                                  namePerson={e.namePerson}
+                                                  position={e.position}
+                                                  image={e.image}
+                                                  inst={e.inst}
+                                                  phone={e.phone} 
+                                                  id={e.id}
+                                                  main={main}
+                                                />                         
+                                              }
+                                          />
+                                              
+                                        }
+                                    </Routes>  
                                 </a>
-                           
-                        </section>
-                    )
-                }
-            </div>
-        </div>  
+                            </section>
+                        )
+                    }
+                </>
+              
+              
+            
+            </> 
+        </div>   
+      </BrowserRouter>  
     )
 }

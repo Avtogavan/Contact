@@ -5,12 +5,13 @@ import whatsapp from '../../../img/whatsapp.png'
 import telegram from '../../../img/telegram.png'
 import instagram from '../../../img/instagram.png'
 import profile from '../../../img/profile.png'
+import { NavLink } from 'react-router-dom'
 
 export default function CardItem({ namePerson, position, image, inst, phone, id, main }) {
 
     return (
 
-        <>
+        <div className={s.wrap}>
             <div className={s.wrapBtn__tell__wrap}>
                 <div>
                     <img src={image !== '' ? image : profile } alt="" className={s.wrapBtn__tell__img}/>
@@ -27,13 +28,13 @@ export default function CardItem({ namePerson, position, image, inst, phone, id,
                 </div>
             </div>
             
-            <a href={'tel: +' + phone} className={s.wrapBtn__tell}>
+            <a id='RouterNavLink'  href={'tel: +' + phone} className={s.wrapBtn__tell}>
                 Позвонить 
             </a>
             
             <Button link={`https://api.whatsapp.com/send/?phone=${phone}`} socNet={whatsapp} title='whatsapp'/>
             <Button link={`https://t.me/+${phone}`} socNet={telegram} title='telegram'/>
             <Button link={`${inst}`} socNet={instagram} title='instagram'/>
-        </>
+        </div>
   )
 }
