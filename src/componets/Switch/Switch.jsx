@@ -13,14 +13,14 @@ export default function Switch({setmain, main}) {
 
     const getElementIndex = (element) => {
       const parent = element.parentNode;
-      console.log(parent);
+    //   console.log(parent);
       return [...parent.children].indexOf(element);
     }
   
     const scrollHandler = () => {
       if (!scrollNavRefs.current) return
       const rectNav = scrollNavRefs.current.getBoundingClientRect();
-      const el = document.elementFromPoint(rectNav.width * 1, rectNav.height + 200)
+      const el = document.elementFromPoint(rectNav.width / 2, rectNav.height + 200)
     //   console.log(el)
       if(!el || el.tagName !== 'SECTION') return
       const newIndex =  getElementIndex(el)
@@ -31,6 +31,7 @@ export default function Switch({setmain, main}) {
 
     const scrollToIndex = (event) => {
         const navLi = event.target.parentNode;
+        console.log(navLi);
         const index = getElementIndex(navLi);
         setmain(index)
     };
@@ -41,9 +42,9 @@ export default function Switch({setmain, main}) {
             <div className={s.mainCon}>
                 { 
                     CardsData.map((e, i) => 
-                        <section className={s.switch} key={i} id={i} >
+                        <section className={s.switch} key={i} id={`${i}`} >
                              
-                                <a href='#' className={ main === i ? 'switch__btn__active switch__btn' : 'switch__btn'}  
+                                <a href={`#${i}`} className={ main === i ? 'switch__btn__active switch__btn' : 'switch__btn'}  
                                     onClick={scrollToIndex}
                                 >
                                     {e.position}

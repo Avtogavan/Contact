@@ -2,26 +2,30 @@
 .slider
     text-align: center
     display: flex
-    margin-top: 55px
-    overflow-x: auto
+    // margin-top: 55px
+    overflow-x: scroll
     width: 340px
-    height: calc( 15vh - 2px)
-    margin: auto
+    // height: calc( 15vh - 2px)
+    margin: 0 auto
+    &::-webkit-scrollbar
+        display: none
 
 .mainCon
     display: flex
     align-items: flex-end
-    width: 90%
-    height: 100%
+    padding: 0 10px
+    width: calc( 50% + 60px)
+    height: auto
 
 .switch 
     z-index: 20
     display: flex
     align-items: center
     justify-content: center
-    margin: 13px 10px
+    margin: 13px 30px
     transition: transform .2s ease-in-out
     min-width: 100%
+    
     &__active
 
     &__link
