@@ -28,13 +28,13 @@ export default function CardItem({ namePerson, position, image, inst, phone, id,
                 </div>
             </div>
             
-            <a id='RouterNavLink'  href={'tel: +' + phone} className={s.wrapBtn__tell}>
+            {/* <a id='RouterNavLink'  href={'tel: +' + phone} className={s.wrapBtn__tell}>
                 Позвонить 
             </a>
             
             <Button link={`https://api.whatsapp.com/send/?phone=${phone}`} socNet={whatsapp} title='whatsapp'/>
             <Button link={`https://t.me/+${phone}`} socNet={telegram} title='telegram'/>
-            <Button link={`${inst}`} socNet={instagram} title='instagram'/>
+            <Button link={`${inst}`} socNet={instagram} title='instagram'/> */}
         </div>
   )
 }

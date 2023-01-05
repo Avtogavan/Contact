@@ -1,11 +1,29 @@
-
+.wrap 
+    display: flex
+    flex-direction: column
+    width: 310px
+    margin: auto
+    &__item
+        display: flex
+        flex-direction: column
+.wrapBtn__tell
+    font-weight: 400
+    font-size: 25px
+    font-weight: 600
+    color: #212121
+    text-decoration: none
+    background: #ffffff
+    border-radius: 7px
+    font-family: 'Roboto', sans-serif
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px    
+    padding: 15px 13px 
+    margin-bottom: 12px
 .slider
     text-align: center
     display: flex
-    // flex-direction: column
     overflow-x: scroll
     width: calc( 100% + 10px )
-    height: calc( 72vh - 2px)
+    height: calc( 25vh - 2px)
     background:  #181818
     margin: 0 auto
     &::-webkit-scrollbar

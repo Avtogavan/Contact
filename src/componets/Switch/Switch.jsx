@@ -3,6 +3,10 @@ import s from './Switch.module.sass'
 import { CardsData } from '../CardsData'
 import CardItem from '../Cards/CardItem/CardItem'
 import { Routes, Route, BrowserRouter, NavLink } from 'react-router-dom'
+import Button from '../Button/Button'
+import whatsapp from '../../img/whatsapp.png'
+import telegram from '../../img/telegram.png'
+import instagram from '../../img/instagram.png'
 
 export default function Switch({setmain, main, top}) {
 
@@ -32,6 +36,7 @@ export default function Switch({setmain, main, top}) {
 
     return (
       <BrowserRouter>
+      <>
         <div className={s.slider} ref={scrollNavRefs} onScroll={scrollHandler}  >  
             <>     
             
@@ -80,7 +85,24 @@ export default function Switch({setmain, main, top}) {
               
             
             </> 
-        </div>   
+        </div> 
+        <div className={s.wrap}> 
+            { 
+                CardsData.filter((e, i) => e.id === main).map((e, i) =>            
+                     <div key={i} className={s.wrap__item}>    
+                    <a id='RouterNavLink'  href={'tel: +' + e.phone} className={s.wrapBtn__tell}>
+                        Позвонить 
+                    </a>
+                    
+                    <Button link={`https://api.whatsapp.com/send/?phone=${e.phone}`} socNet={whatsapp} title='whatsapp'/>
+                    <Button link={`https://t.me/+${e.phone}`} socNet={telegram} title='telegram'/>
+                    <Button link={`${e.inst}`} socNet={instagram} title='instagram'/>
+                 </div>
+                )
+          }
+           </div>
+        </>
       </BrowserRouter>  
+
     )
 }
