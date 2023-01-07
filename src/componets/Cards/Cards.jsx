@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import s from './Cards.module.sass'
-import Switch from '../Switch/Switch'
 import {CardsData} from '../CardsData'
 import CardItem from '../Cards/CardItem/CardItem'
 import {Routes, Route, BrowserRouter, NavLink} from 'react-router-dom'
@@ -20,7 +19,7 @@ export default function Cards() {
                 <> <div className={s.slider}>
                     <Routes>
                         <Route
-                          path={'/'}
+                          path={'/*'}
                           element={
                             <>
 
