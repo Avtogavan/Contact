@@ -1,11 +1,14 @@
 import React, {useState} from 'react'
 import s from './Cards.module.sass'
 import {CardsData} from '../CardsData'
-import CardItem from '../Cards/CardItem/CardItem'
-import {Routes, Route, BrowserRouter, NavLink} from 'react-router-dom'
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Button from './../Button/Button';
-import Back from './Back';
 import Search from '../Search/Search'
+import  {withRouter}  from '../withRouter/withRouter';
+import Profile from '../Profile/Profile';
+
+const ParamQ = withRouter(Profile)
+
 
 export default function Cards() {
 
@@ -57,27 +60,20 @@ export default function Cards() {
                           
                             <Route
                               key={i}
-                              path={`/Contact/${e.position}/*`} 
+                              exact
+                              path={'/Contact/:position'} 
                               element={ 
-                                <div className={s.card__width} style={{margin: '0 auto'}}> 
-                                 <NavLink className={s.card__back} to={'/Contact'}>
-                                    <Back/>
-
-                                      &nbsp; 
-
-                                    <div style={{marginBottom: ' 7px'}}> 
-                                        На главную 
-                                    </div>
-                                  </NavLink>
-                               
-                                  <CardItem 
-                                    key={i}
+                                <div className={s.card__width} key={i}> 
+                                
+                                <ParamQ 
                                     namePerson={e.namePerson} 
                                     position={e.position} 
                                     image={e.image} 
                                     inst={e.inst} 
                                     phone={e.phone}
-                                  />
+                                >
+                                    <Profile />
+                                </ParamQ>
                                   
                                 </div> 
                               }
