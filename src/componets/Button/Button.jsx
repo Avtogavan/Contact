@@ -21,7 +21,7 @@ export default function Button({link, socNet, title, btn}) {
         </>
         : 
         <>
-          <NavLink to={`/${link}`} className={s.wrapBtn__btn}>
+          <NavLink to={`/Contact/${link}`} className={s.wrapBtn__btn}>
             <div className={s.wrapBtn__btn__inner}>
                 <div className={s.wrapBtn__btn__title} style={{marginLeft:'0'}}>{title}</div>
             </div>
