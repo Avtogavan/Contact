@@ -60,7 +60,7 @@ export default function Cards() {
                               path={`/Contact/${e.position}`} 
                               element={ 
                                 <div className={s.card__width}> 
-                                 <NavLink className={s.card__back} to={'/'}>
+                                 <NavLink className={s.card__back} to={'/Contact'}>
                                     <Back/>
 
                                       &nbsp; 
