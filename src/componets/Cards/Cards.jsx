@@ -22,7 +22,7 @@ export default function Cards() {
                 <> <div className={s.slider}>
                     <Routes>
                         <Route
-                          path={'/*'}
+                          path={'/Contact'}
                           element={
                             <>
 
