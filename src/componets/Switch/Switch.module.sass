@@ -23,9 +23,10 @@
     display: flex
     overflow-x: scroll
     width: calc( 100% + 10px )
-    height: calc( 25vh - 2px)
+    height: 25vh
     background:  #181818
     margin: 0 auto
+    scroll-behavior: smooth
     &::-webkit-scrollbar
         display: none
 
@@ -40,6 +41,7 @@
     margin: 0px 10px
     transition: transform .2s ease-in-out
     min-width: 100%
+  
     // &:nth-child(6)
     //     padding-right: 100px
  
@@ -96,9 +98,9 @@
         white-space: normal
 
 @media screen and (max-width: 400px)
-    .slider
-        height: calc( 65vh - 2px)
+    // .slider
+    //     height: calc( 65vh - 2px)
 
-    .switch
-        margin-top: 180px
+    // .switch
+    //     margin-top: 180px
         

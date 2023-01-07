@@ -53,5 +53,37 @@ export const CardsData = [
         inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
+    {   
+        id: 5,
+        namePerson: 'c' ,
+        position: 'Отдел запчастей',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: 5,
+        namePerson: 'c' ,
+        position: 'Отдел запчастей',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: 5,
+        namePerson: 'c' ,
+        position: 'Отдел запчастей',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: 5,
+        namePerson: 'c' ,
+        position: 'Отдел запчастей',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
 
 ]

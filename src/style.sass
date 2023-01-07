@@ -1,18 +1,24 @@
+
+    
 body
     color: #212121
     font-family: Roboto, sans-serif
     margin: 0
     padding: 0
 
+
 .app
     background: #dcdcdc
-    background: #d5d5d5
-    position: relative
+    // background: #d5d5d5
+    background: -webkit-linear-gradient(90deg,#6340a2,#17dba3,#0b7373)
+    background: linear-gradient(90deg,#6340a2,#17dba3,#0b7373)
+
     font-size: 60px
     display: flex
     flex-direction: column
     align-items: center
     text-align: center
+    position: relative
     min-height: 100vh
     &__inner
         display: flex
@@ -38,12 +44,17 @@ body
     display: flex
     flex-direction: column
     margin-top: 50px
-    justify-content: center
+    // justify-content: center
     background:  #181818
+    position: relative
     border-radius: 33px
     padding-top: 20px
+    max-width: 700px
+    max-height: 650px
+    height: 100%
     width: 100%
     padding-bottom: 5px
+    overflow-y: auto
     &__title
         font-family: 'Balsamiq Sans', cursive
         font-size: 26px
@@ -63,7 +74,7 @@ body
     position: absolute
     left: 0
     right: 0
-    bottom: 2%
+    bottom: 3%
     white-space: nowrap
     font-family: 'Balsamiq Sans', cursive
 
@@ -98,7 +109,7 @@ body
     .wrapBtn
         margin-top: 50px
     .title
-        bottom: 0%
+        bottom: 1%
     .app
         padding-bottom: 5px
 
@@ -109,6 +120,6 @@ body
     .app
         padding-bottom: 70px
     .title
-        bottom: 2%
+        bottom: 3%
 
     
