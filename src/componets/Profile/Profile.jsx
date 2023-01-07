@@ -5,17 +5,17 @@ import Back from './../Cards/Back';
 import CardItem from './../Cards/CardItem/CardItem';
 
 export default function Profile(props) {
-
-    useEffect(()=> {
-        let position = props.router.params.position
-        if (!position) {
-            position = props.position 
-            if (!position) {
-                props.router.navigate('/Contact')
-            }
-        }
+console.log(props.router.params);
+    // useEffect(()=> {
+    //     let id = props.router.params.id
+    //     if (!id) {
+    //         id = props.id 
+    //         // if (!position) {
+    //         //     props.router.navigate('/Contact')
+    //         // }
+    //     }
         
-    }, [props.router.params.position])
+    // }, [props.router.params.id])
 
   return (
     <>

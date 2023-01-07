@@ -22,7 +22,7 @@ export default function Cards() {
                 <> <div className={s.slider}>
                     <Routes>
                         <Route
-                          path={'*'}
+                          path={'/*'}
                           element={
                             <>
 
@@ -43,7 +43,7 @@ export default function Cards() {
 
                                       <div className={s.card__wrapBtn} key={i}>
 
-                                          <Button link={e.position} title={e.position}/>
+                                          <Button link={e.id} title={e.position}/>
 
                                       </div>
                                       
@@ -61,18 +61,18 @@ export default function Cards() {
                             <Route
                               key={i}
                               exact
-                              path={'/Contact/:position'} 
+                              path={'/Contact/:id' } 
                               element={ 
                                 <div className={s.card__width} key={i}> 
                                 
                                 <ParamQ 
-                                    namePerson={e.namePerson} 
+                                  
+                                >
+                                    <Profile namePerson={e.namePerson} 
                                     position={e.position} 
                                     image={e.image} 
                                     inst={e.inst} 
-                                    phone={e.phone}
-                                >
-                                    <Profile />
+                                    phone={e.phone}/>
                                 </ParamQ>
                                   
                                 </div> 

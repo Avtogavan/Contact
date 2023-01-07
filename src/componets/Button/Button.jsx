@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Button.module.sass'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Button({link, socNet, title, btn}) {
 
@@ -21,11 +21,11 @@ export default function Button({link, socNet, title, btn}) {
         </>
         : 
         <>
-          <NavLink to={`/Contact/${link}`} className={s.wrapBtn__btn}>
+          <Link to={`/Contact/${link}`} className={s.wrapBtn__btn}>
             <div className={s.wrapBtn__btn__inner}>
                 <div className={s.wrapBtn__btn__title} style={{marginLeft:'0'}}>{title}</div>
             </div>
-          </NavLink>
+          </Link>
         </>
       }
     </>
