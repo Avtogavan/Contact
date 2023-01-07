@@ -59,7 +59,7 @@ export default function Cards() {
                               key={i}
                               path={`/Contact/${e.position}`} 
                               element={ 
-                                <div className={s.card__width}> 
+                                <div className={s.card__width} style={{margin: '0 auto'}}> 
                                  <NavLink className={s.card__back} to={'/Contact'}>
                                     <Back/>
 
