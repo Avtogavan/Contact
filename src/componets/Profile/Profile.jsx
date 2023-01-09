@@ -1,11 +1,11 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 import s from '../Cards/Cards.module.sass'
 import Back from './../Cards/Back';
 import CardItem from './../Cards/CardItem/CardItem';
 
 export default function Profile(props) {
-
+console.log(useLocation());
   return (
     <>
        <NavLink className={s.card__back} to={'/Contact'}>

@@ -2,7 +2,7 @@ import React from 'react';
 import './style.sass'
 import logo from './img/logo1.png'
 import Cards from './componets/Cards/Cards';
-import {  BrowserRouter as Router} from 'react-router-dom';
+import {  HashRouter as Router} from 'react-router-dom';
 
 export default function App(props) {
 
