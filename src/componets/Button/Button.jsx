@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Button.module.sass'
 import { Link } from 'react-router-dom';
 
-export default function Button({link, socNet, title, btn}) {
+export default function Button({link, id, setParam, socNet, title, btn}) {
 
   return (
     <>
@@ -21,7 +21,7 @@ export default function Button({link, socNet, title, btn}) {
         </>
         : 
         <>
-          <Link to={`/Contact/${link}`} className={s.wrapBtn__btn}>
+          <Link onClick={()=> setParam(id)} to={`/Contact/${id}`} className={s.wrapBtn__btn}>
             <div className={s.wrapBtn__btn__inner}>
                 <div className={s.wrapBtn__btn__title} style={{marginLeft:'0'}}>{title}</div>
             </div>

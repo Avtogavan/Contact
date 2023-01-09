@@ -1,24 +1,21 @@
 import React, {useState} from 'react'
 import s from './Cards.module.sass'
 import {CardsData} from '../CardsData'
-import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Button from './../Button/Button';
 import Search from '../Search/Search'
-import  {withRouter}  from '../withRouter/withRouter';
 import Profile from '../Profile/Profile';
-
-const ParamQ = withRouter(Profile)
-
 
 export default function Cards() {
 
     const [search, setSearch] = useState('')
 
+    const [param, setParam] = useState(0)
+
     return (
 
         <div className={s.card}>
             
-            <BrowserRouter>
                 <> <div className={s.slider}>
                     <Routes>
                         <Route
@@ -43,7 +40,11 @@ export default function Cards() {
 
                                       <div className={s.card__wrapBtn} key={i}>
 
-                                          <Button link={e.id} title={e.position}/>
+                                          <Button 
+                                            setParam={setParam}
+                                            id={e.id} 
+                                            title={e.position}
+                                          />
 
                                       </div>
                                       
@@ -55,36 +56,38 @@ export default function Cards() {
                           }
                         />
                         <>
-                          { 
-                            CardsData.map((e, i) => 
+                        
+                          
                           
                             <Route
-                              key={i}
+                            
                               exact
-                              path={'/Contact/:id' } 
+                              path={`/Contact/:id`} 
                               element={ 
+                                
+                                  CardsData.filter(e=> e.id === param).map((e, i) => 
                                 <div className={s.card__width} key={i}> 
                                 
-                                <ParamQ 
-                                  
-                                >
-                                    <Profile namePerson={e.namePerson} 
-                                    position={e.position} 
-                                    image={e.image} 
-                                    inst={e.inst} 
-                                    phone={e.phone}/>
-                                </ParamQ>
+                              
+                                    <Profile 
+                                    
+                                     namePerson={e.namePerson} 
+                                     position={e.position} 
+                                     image={e.image} 
+                                     inst={e.inst} 
+                                     phone={e.phone}
+                                    />
                                   
                                 </div> 
-                              }
+                              )}
                             />
-                            )
-                          }
+                            
+                          
+
                         </>
                     </Routes>
                 </div>
             </>
-        </BrowserRouter>
 
     </div>
 
