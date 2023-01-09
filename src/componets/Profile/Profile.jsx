@@ -8,7 +8,7 @@ export default function Profile(props) {
 console.log(useLocation());
   return (
     <>
-       <NavLink className={s.card__back} to={'/Contact'}>
+       <NavLink className={s.card__back} to={'/'}>
 
             <Back/>
 

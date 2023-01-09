@@ -21,7 +21,7 @@ export default function Button({link, id, setParam, socNet, title, btn}) {
         </>
         : 
         <>
-          <Link onClick={()=> setParam(id)} to={`/Contact/${id}`} className={s.wrapBtn__btn}>
+          <Link onClick={()=> setParam(id)} to={`/${id}`} className={s.wrapBtn__btn}>
             <div className={s.wrapBtn__btn__inner}>
                 <div className={s.wrapBtn__btn__title} style={{marginLeft:'0'}}>{title}</div>
             </div>

@@ -19,7 +19,7 @@ export default function Cards() {
                 <> <div className={s.slider}>
                     <Routes>
                         <Route
-                          path={'/Contact'}
+                          path={'/'}
                           element={
                             <>
 
@@ -62,7 +62,7 @@ export default function Cards() {
                             <Route
                             
                               exact
-                              path={`/Contact/:id`} 
+                              path={`/:id`} 
                               element={ 
                                 
                                   CardsData.filter(e=> e.id === param).map((e, i) => 
