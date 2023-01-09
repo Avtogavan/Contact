@@ -54,7 +54,23 @@ export const CardsData = [
         phone: '89069681028' 
     },
     {   
-        id: 5,
+        id: 6,
+        namePerson: 'c' ,
+        position: 'Склад',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: 7,
+        namePerson: 'c' ,
+        position: 'Гостиница',
+        image: '',
+        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        phone: '89069681028' 
+    },
+    {   
+        id: 8,
         namePerson: 'c' ,
         position: 'Отдел запчастей',
         image: '',
@@ -62,23 +78,7 @@ export const CardsData = [
         phone: '89069681028' 
     },
     {   
-        id: 5,
-        namePerson: 'c' ,
-        position: 'Отдел запчастей',
-        image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
-        phone: '89069681028' 
-    },
-    {   
-        id: 5,
-        namePerson: 'c' ,
-        position: 'Отдел запчастей',
-        image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
-        phone: '89069681028' 
-    },
-    {   
-        id: 5,
+        id: 9,
         namePerson: 'c' ,
         position: 'Отдел запчастей',
         image: '',
