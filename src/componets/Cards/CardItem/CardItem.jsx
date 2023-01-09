@@ -8,6 +8,7 @@ import profile from '../../../img/profile.png'
 import { NavLink } from 'react-router-dom'
 import back from '../../../img/1.svg'
 import Back from '../Back';
+
 export default function CardItem({ namePerson, position, image, inst, phone}) {
 
     return (

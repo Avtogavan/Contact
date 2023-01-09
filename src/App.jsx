@@ -16,7 +16,7 @@ export default function App(props) {
           <div className="wrapBtn__title">
               Наши контакты
           </div>
-         <Router baseline='/'>  
+         <Router basename='/'>  
          <Cards/> 
          </Router> 
             

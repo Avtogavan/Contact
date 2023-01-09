@@ -1,16 +1,18 @@
 import React, {useState} from 'react'
 import s from './Cards.module.sass'
 import {CardsData} from '../CardsData'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useParams} from 'react-router-dom'
 import Button from './../Button/Button';
 import Search from '../Search/Search'
 import Profile from '../Profile/Profile';
+import ProfileContainer from '../Profile/ProfileContainer';
 
 export default function Cards() {
 
     const [search, setSearch] = useState('')
 
     const [param, setParam] = useState(0)
+
 
     return (
 
@@ -65,21 +67,7 @@ export default function Cards() {
                               path={`/:id`} 
                               element={ 
                                 
-                                  CardsData.filter(e=> e.id === param).map((e, i) => 
-                                <div className={s.card__width} key={i}> 
-                                
-                              
-                                    <Profile 
-                                    
-                                     namePerson={e.namePerson} 
-                                     position={e.position} 
-                                     image={e.image} 
-                                     inst={e.inst} 
-                                     phone={e.phone}
-                                    />
-                                  
-                                </div> 
-                              )}
+                                 <ProfileContainer param={param}/>}
                             />
                             
                           
