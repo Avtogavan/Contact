@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './style.sass'
 import logo from './img/logo1.png'
 import Cards from './componets/Cards/Cards';
-import {  HashRouter as Router} from 'react-router-dom';
+import { useLocation, useNavigate, useParams} from 'react-router-dom';
 
 export default function App(props) {
-
+   let navigate = useNavigate()  
+   let param = useLocation()
+   useEffect(()=> {
+       if (param.pathname == '/') {
+         navigate(`/0`, {replace: true})
+       }
+       
+   }, [ param])
   return (
 
     <div className="app" >
@@ -16,9 +23,8 @@ export default function App(props) {
           <div className="wrapBtn__title">
               Наши контакты
           </div>
-         <Router basename='/'>  
+       
          <Cards/> 
-         </Router> 
             
       </div>
        <div className="title">ТОО &nbsp; "Автогавань"</div>

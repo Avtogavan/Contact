@@ -16,15 +16,22 @@ export default function Cards() {
             
                 <> 
                     <Routes>   
-                    <Route
+                    {/* <Route
                         
                         path={`/`} 
                         element={<NavLink to={`/0`} className={s.card__btn}>Связаться с сотрудниками</NavLink>}
-                      /> 
+                      />  */}
                       <Route
                         exact
-                        path={`/:id`} 
-                        element={<ProfileContainer setParam={setParam} param={param}/>}
+                        path={`*`} 
+                        element={
+                          <Routes>
+                          <Route path='/:id' element={
+                              <ProfileContainer setParam={setParam} param={param}/>
+                            }
+                          />
+                          </Routes>
+                      }
                       />
                                                       
                     </Routes>
