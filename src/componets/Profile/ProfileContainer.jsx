@@ -29,7 +29,7 @@ export default function ProfileContainer({param, setParam}) {
     return (
             <> 
                 <Swiper
-                    style={{width: '600px'}}
+                    style={{width: '340px', margin: 'auto', overflow: 'hidden'}}
                     initialSlide={param}
                     centeredSlides={true}
                     slidesPerView={3}
