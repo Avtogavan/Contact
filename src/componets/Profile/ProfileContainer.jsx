@@ -18,13 +18,13 @@ export default function ProfileContainer({param, setParam}) {
     }, [ param])
  
 
-    console.log(param);
-    useEffect(()=> {
-        window.addEventListener('',  ()=> setParam(userId.id))
-        return () => {
-            window.removeEventListener('load',  ()=> setParam(userId.id))
-          };
-    }, [param])
+    // console.log(param);
+    // useEffect(()=> {
+    //     window.addEventListener('',  ()=> setParam(userId.id))
+    //     return () => {
+    //         window.removeEventListener('load',  ()=> setParam(userId.id))
+    //       };
+    // }, [param])
 
     return (
             <> 
