@@ -7,25 +7,14 @@ import CardItem from './../Cards/CardItem/CardItem';
 export default function Profile(props) {
 
   return (
-    <>
-       <NavLink className={s.card__back} to={'/'}>
-
-            <Back/>
-
-            &nbsp; 
-
-            <div style={{marginBottom: ' 7px'}}> 
-                На главную 
-            </div>
-        </NavLink>
-        
-        <CardItem
+    <>  
+        {/* <CardItem
             namePerson={props.namePerson} 
             position={props.position} 
             image={props.image} 
             inst={props.inst} 
             phone={props.phone}
-        />
+        /> */}
     </>
   )
 }

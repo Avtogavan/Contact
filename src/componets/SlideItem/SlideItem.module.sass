@@ -1,0 +1,64 @@
+.wrapBtn__tell
+    font-weight: 400
+    font-size: 25px
+    font-weight: 600
+    color: #212121
+    text-decoration: none
+    background: #ffffff
+    border-radius: 7px
+    font-family: 'Roboto', sans-serif
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px    
+    padding: 15px 13px 
+    margin-bottom: 12px
+    &__wrap
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        min-width: 100%
+        background: #535353
+        border-radius: 20px
+        padding: 12px 0
+        text-align: center
+        margin: 16px auto
+        margin-bottom: 24px
+        min-width: 200px
+        transform: scale(0.7)
+        transition: transform .16s ease-in
+        &__active
+            transform: scale(1)
+    &__title
+        margin-top: 5px
+        // margin-left: 30px
+        color: #ffffff
+        font-size: 22px
+        letter-spacing: .9px
+
+    &__subtitle
+        font-weight: 300
+        color: #e6e6e6
+        font-size: 14px     
+        letter-spacing: .9px
+        font-family: "Roboto",  sans-serif
+    &__img
+        display: block
+        text-decoration: none
+        object-fit: cover
+        object-position: center 
+        height: 90px
+        min-height: 90px
+        max-height: 90px
+        border-radius: 50%
+        width: 90px
+        max-width: 90px
+        min-width: 90px
+
+@media screen and (max-width: 992px) 
+    .wrapBtn__tell
+        &__wrap
+            margin-bottom: 40px
+            margin-top: 30px
+
+
+
+  
