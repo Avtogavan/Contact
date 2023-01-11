@@ -10,31 +10,23 @@ import CardItem from '../Cards/CardItem/CardItem'
 export default function ProfileContainer({param, setParam}) {
 
     let navigate = useNavigate()  
-    let userId = useParams()
+    const {id} = useParams()
 
     useEffect(()=> {
-        
-        navigate(`/${param}`, {replace: true})
+        navigate(`/${ param}`, {replace: true})
     }, [ param])
  
+    const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    // console.log(param);
-    // useEffect(()=> {
-    //     window.addEventListener('',  ()=> setParam(userId.id))
-    //     return () => {
-    //         window.removeEventListener('load',  ()=> setParam(userId.id))
-    //       };
-    // }, [param])
+    let init = arrNumber.find((e)=> e == id)
 
     return (
             <> 
                 <Swiper
-                    style={{width: '340px', margin: 'auto', overflow: 'hidden'}}
-                    initialSlide={param}
+                    style={{width: '350px', margin: 'auto', overflow: 'hidden'}}
+                    initialSlide={init}
                     centeredSlides={true}
                     slidesPerView={3}
-                    // onSwiper={swiper}
-                    spaceBetween={0}
                     loop={true}
                     onActiveIndexChange={e=> setParam(e.realIndex)}
                     onSlideChange={e=> setParam(e.realIndex)}
