@@ -13,7 +13,7 @@ export default function ProfileContainer({param, setParam}) {
     const {id} = useParams()
 
     useEffect(()=> {
-        navigate(`/${ param}`, {replace: true})
+        navigate(`/${param}`, {replace: true})
     }, [ param])
  
     const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -23,7 +23,7 @@ export default function ProfileContainer({param, setParam}) {
     return (
             <> 
                 <Swiper
-                    style={{width: '350px', margin: 'auto', overflow: 'hidden'}}
+                    style={{width: '360px', margin: 'auto', overflow: 'hidden'}}
                     initialSlide={init}
                     centeredSlides={true}
                     slidesPerView={3}
@@ -45,9 +45,6 @@ export default function ProfileContainer({param, setParam}) {
                 )}
                 </Swiper>
                 
-               
-                {/* </div>  */}
-
                 { CardsData.filter(e=> e.id === param).map((e, i) => 
                     <div className={s.card__width} key={i}> 
                     
