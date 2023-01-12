@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Contact/static/css/main.aebeef2f.css",
-    "main.js": "/Contact/static/js/main.298fcc7f.js",
+    "main.css": "/Contact/static/css/main.4d039d2a.css",
+    "main.js": "/Contact/static/js/main.3e1f7aeb.js",
     "static/js/787.ee95881d.chunk.js": "/Contact/static/js/787.ee95881d.chunk.js",
+    "static/media/pic.gif": "/Contact/static/media/pic.2bf2e1673b9af2c646f8.gif",
     "static/media/profile.png": "/Contact/static/media/profile.b9812bb5a16b9fa0c9c1.png",
     "static/media/logo1.png": "/Contact/static/media/logo1.700bd99984345ccfae5a.png",
     "static/media/instagram.png": "/Contact/static/media/instagram.8e408da00539cdef4629.png",
@@ -12,12 +13,12 @@
     "static/media/whatsapp.png": "/Contact/static/media/whatsapp.c2d441e6945db7e7943b.png",
     "static/media/1.svg": "/Contact/static/media/1.8256338c89ff7b3ee37e923db04402d5.svg",
     "index.html": "/Contact/index.html",
-    "main.aebeef2f.css.map": "/Contact/static/css/main.aebeef2f.css.map",
-    "main.298fcc7f.js.map": "/Contact/static/js/main.298fcc7f.js.map",
+    "main.4d039d2a.css.map": "/Contact/static/css/main.4d039d2a.css.map",
+    "main.3e1f7aeb.js.map": "/Contact/static/js/main.3e1f7aeb.js.map",
     "787.ee95881d.chunk.js.map": "/Contact/static/js/787.ee95881d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aebeef2f.css",
-    "static/js/main.298fcc7f.js"
+    "static/css/main.4d039d2a.css",
+    "static/js/main.3e1f7aeb.js"
   ]
 }
