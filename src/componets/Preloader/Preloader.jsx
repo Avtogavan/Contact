@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Preloader.module.sass'
-import pic from '../../img/pic.gif'
+import pic from '../../img/pic2.gif'
 
 export default function Preloader() {
   return (

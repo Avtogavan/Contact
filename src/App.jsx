@@ -26,18 +26,20 @@ export default function App() {
    {  
       pathname !== '/' ?
          <>
-            <div className="app__inner anime">
+            <div className="app__inner animeLogo">
                <img src={logo} alt="Автогавань" className="app__inner__logo"/>
             </div>
-            <div className="wrapBtn anime">
+            <div className="wrapBtn ">
                <div className="wrapBtn__title">
                   Наши контакты
                </div>
             
+            <div className='anime'>   
                <Cards param={param} setParam={setParam}/> 
+            </div>
                   
             </div>
-            <div className="title anime">ТОО &nbsp; "Автогавань"</div>
+            <div className="title ">ТОО &nbsp; "Автогавань"</div>
          </>
       
       :  
