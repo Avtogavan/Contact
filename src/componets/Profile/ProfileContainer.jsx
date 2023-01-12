@@ -15,9 +15,9 @@ export default function ProfileContainer({param, setParam}) {
     useEffect(()=> {
         navigate(`/${param}`, {replace: true})
     }, [ param])
- 
-    const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+    const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+ 
     let init = arrNumber.find((e)=> e == id)
 
     return (
