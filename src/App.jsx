@@ -14,7 +14,7 @@ export default function App() {
 
    useEffect(()=> {
        if ( pathname == '/') {
-         setTimeout(()=> navigate(`/${param}`, {replace: true}), 4000)       
+         setTimeout(()=> navigate(`/${param}`, {replace: true}), 3500)       
       }
        
    }, [pathname])
