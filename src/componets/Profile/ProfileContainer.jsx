@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import { CardsData } from '../CardsData'
 import s from '../Cards/Cards.module.sass'
 import {useNavigate, useParams } from 'react-router-dom'
@@ -14,7 +14,7 @@ export default function ProfileContainer({param, setParam}) {
 
     useEffect(()=> {
         navigate(`/${param}`, {replace: true})
-    }, [ param])
+    }, [param])
 
     const arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
  
