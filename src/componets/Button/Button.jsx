@@ -9,15 +9,22 @@ export default function Button({link, id, setParam, socNet, title, btn}) {
       {
        btn !== undefined ?
         
-        <>
-            <a href={link} target='_blank' className={s.wrapBtn__btn}>
-                <div className={s.wrapBtn__btn__inner}>
-                    <div>
-                        <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
-                    </div>
-                    <div className={s.wrapBtn__btn__title}>{title}</div>
-                </div>
-            </a>
+        <> 
+          { 
+            title !== undefined ?
+              <a href={link} target='_blank' className={s.wrapBtn__btn}>
+                  <div className={s.wrapBtn__btn__inner}>
+                      <div>
+                          <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
+                      </div>
+                      <div className={s.wrapBtn__btn__title}>{title}</div>
+                  </div>
+              </a>
+            :
+              <a href={link} target='_blank' className={s.wrapBtn__btn} style={{background: 'none'}}>
+                <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
+              </a>
+          }
         </>
         : 
         <>
