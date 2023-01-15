@@ -8,7 +8,6 @@ export const CardsData = [
         namePerson: 'Фарид' ,
         position: 'Главный механик',
         image: f,
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '77015013205' 
     },
 
@@ -17,7 +16,6 @@ export const CardsData = [
         namePerson: 'Филипп' ,
         position: 'Менеджер',
         image: m,
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '0000' 
     },
 
@@ -26,7 +24,6 @@ export const CardsData = [
         namePerson: 'ty' ,
         position: 'Директор',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -34,7 +31,6 @@ export const CardsData = [
         namePerson: 'a' ,
         position: 'Заместитель директора',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -42,7 +38,6 @@ export const CardsData = [
         namePerson: 'b' ,
         position: 'Бухгалтер',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -50,7 +45,6 @@ export const CardsData = [
         namePerson: 'c' ,
         position: 'nbkbl',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -58,7 +52,6 @@ export const CardsData = [
         namePerson: 'q' ,
         position: 'Склад',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -66,7 +59,6 @@ export const CardsData = [
         namePerson: 'h' ,
         position: 'Гостиница',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
@@ -74,15 +66,13 @@ export const CardsData = [
         namePerson: 'k' ,
         position: 'Отдел запчастей',
         image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
         phone: '89069681028' 
     },
     {   
         id: 9,
         namePerson: 'u' ,
         position: 'Отдел ',
-        image: '',
-        inst: 'https://instagram.com/avto.gavan.pvl?igshid=YWJhMjlhZTc=', 
+        image: '', 
         phone: '89069681028' 
     },
 

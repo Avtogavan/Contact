@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { CardsData } from '../CardsData'
 import s from '../Cards/Cards.module.sass'
 import {useNavigate, useParams } from 'react-router-dom'
@@ -6,7 +6,7 @@ import SlideItem from '../SlideItem/SlideItem'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import CardItem from '../Cards/CardItem/CardItem'
-
+import swipeFinger from '../../img/swipeFinger.gif'
 export default function ProfileContainer({param, setParam}) {
 
     let navigate = useNavigate()  
@@ -20,8 +20,16 @@ export default function ProfileContainer({param, setParam}) {
  
     let init = arrNumber.find((e)=> e == id)
 
+    const onSlide = (e) => {
+        setParam(e.realIndex)
+    }
+
     return (
             <> 
+                <div className={s.card__finger}>
+                    <img src={swipeFinger} className={s.card__finger__item} alt="" />
+                </div>
+
                 <Swiper
                     style={{width: '360px', margin: 'auto', overflow: 'hidden'}}
                     initialSlide={init}
@@ -29,12 +37,13 @@ export default function ProfileContainer({param, setParam}) {
                     slidesPerView={3}
                     loop={true}
                     onActiveIndexChange={e=> setParam(e.realIndex)}
-                    onSlideChange={e=> setParam(e.realIndex)}
+                    onSlideChange={onSlide}
                 >
                 { CardsData.map((e, i) => 
                     <SwiperSlide key={i}>
                         <SlideItem 
                             id={e.id}
+                            // setParam={setParam}
                             param={param}
                             image={e.image} 
                             namePerson={e.namePerson} 
@@ -52,7 +61,6 @@ export default function ProfileContainer({param, setParam}) {
                             namePerson={e.namePerson} 
                             position={e.position} 
                             image={e.image} 
-                            inst={e.inst} 
                             phone={e.phone}
                         />
                         

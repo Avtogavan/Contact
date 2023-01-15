@@ -68,27 +68,6 @@ body
         min-width: 24px
         min-height: 24px
         max-height: 24px
-        &__popup
-            position: fixed
-            bottom: 0
-            z-index: 999
-            height: 130px
-            text-align: center
-            max-width: 600px
-            left: 0
-            right: 0
-            margin: 0 auto
-            transform: translateY(0)
-            background: #f3f0f0
-            display: flex
-            justify-content: center
-            padding: 7px
-            padding-top: 60px
-            border-top-right-radius: 28px
-            border-top-left-radius: 28px
-            transition: transform .3s cubic-bezier(0, 1, 0.5, 1)
-            animation: popup .3s cubic-bezier(0, 1, 0.5, 1)
-
     &__title
         font-family: 'Balsamiq Sans', cursive
         font-size: 26px
@@ -100,17 +79,6 @@ body
         color: #ffff
         text-align: center
 
-@keyframes popup
-    0%
-        transform: translateY(500px)
-        
-    100%
-        transform: translateY(0)
-        
-.popup-overlay 
-  background: rgba(0, 0, 0, 0.8)
-.popup-arrow
-    display: none
 .anime
     animation: opacity 1.4s ease-in-out
 

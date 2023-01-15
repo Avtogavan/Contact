@@ -1,40 +1,18 @@
 import React from 'react'
 import s from './Button.module.sass'
-import { Link } from 'react-router-dom';
 
-export default function Button({link, id, setParam, socNet, title, btn}) {
+export default function Button({link, socNet, title}) {
 
   return (
     <>
-      {
-       btn !== undefined ?
-        
-        <> 
-          { 
-            title !== undefined ?
-              <a href={link} target='_blank' className={s.wrapBtn__btn}>
-                  <div className={s.wrapBtn__btn__inner}>
-                      <div>
-                          <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
-                      </div>
-                      <div className={s.wrapBtn__btn__title}>{title}</div>
-                  </div>
-              </a>
-            :
-              <a href={link} target='_blank' className={s.wrapBtn__btn} style={{background: 'none'}}>
-                <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
-              </a>
-          }
-        </>
-        : 
-        <>
-          <Link onClick={()=> setParam(id)} to={`/${id}`} className={s.wrapBtn__btn}>
+        <a href={link} target='_blank' className={s.wrapBtn__btn}>
             <div className={s.wrapBtn__btn__inner}>
-                <div className={s.wrapBtn__btn__title} style={{marginLeft:'0'}}>{title}</div>
+                <div>
+                    <img className={s.wrapBtn__btn__img} src={socNet} alt="" />
+                </div>
+                <div className={s.wrapBtn__btn__title}>{title}</div>
             </div>
-          </Link>
-        </>
-      }
+        </a>
     </>
   )
 }

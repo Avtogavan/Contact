@@ -2,6 +2,19 @@
     height: auto
     width: 100%
     margin: 0 auto
+    &__finger
+        margin-top: 10px
+        width: 100%
+        min-width: 71x
+        height: 33px
+        animation: opacity .3s ease
+        position: relative
+        &__item
+            position: absolute
+            right: 20px
+            min-width: 71px
+            height: 33px
+            object-fit: cover
     &__width
         max-width: 400px
         margin: 0 auto
@@ -21,3 +34,9 @@
         align-items: center
         justify-content: start
         margin: 0 30px
+
+@keyframes opacity
+    0%
+        opacity: 0
+    100%
+        opacity: 1

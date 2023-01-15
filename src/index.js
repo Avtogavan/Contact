@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {Suspense, lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter as Router} from 'react-router-dom';
+import Preloader from './componets/Preloader/Preloader';
+const App = React.lazy(()=> import( './App'))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router basename='/'>  
-      <App />
-      </Router>
+     <Suspense fallback={<Preloader/>}><App /></Suspense> 
+    </Router>
   </React.StrictMode>
 );
 
