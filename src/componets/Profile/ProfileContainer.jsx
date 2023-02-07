@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import { CardsData } from '../CardsData'
 import s from '../Cards/Cards.module.sass'
 import {useNavigate, useParams } from 'react-router-dom'
@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import CardItem from '../Cards/CardItem/CardItem'
 import swipeFinger from '../../img/swipeFinger.gif'
+
 export default function ProfileContainer({param, setParam}) {
 
     let navigate = useNavigate()  
@@ -20,27 +21,27 @@ export default function ProfileContainer({param, setParam}) {
  
     let init = arrNumber.find((e)=> e == id)
 
-    const onSlide = (e) => {
+    const indexChange = (e) => {
         setParam(e.realIndex)
     }
 
     return (
             <> 
                 <div className={s.card__finger}>
-                    <img src={swipeFinger} className={s.card__finger__item} alt="" />
+                  <img src={swipeFinger} className={s.card__finger__item} alt="" /> 
                 </div>
 
                 <Swiper
-                    style={{width: '360px', margin: 'auto', overflow: 'hidden'}}
+                    style={{ margin: ' 0 auto', overflow: 'hidden'}}
                     initialSlide={init}
                     centeredSlides={true}
                     slidesPerView={3}
                     loop={true}
-                    onActiveIndexChange={e=> setParam(e.realIndex)}
-                    onSlideChange={onSlide}
+                    onActiveIndexChange={indexChange}
+                    onSlideChange={e=> setParam(e.realIndex)}
                 >
-                { CardsData.map((e, i) => 
-                    <SwiperSlide key={i}>
+                { CardsData.map((e, i) =>
+                    <SwiperSlide key={i} >
                         <SlideItem 
                             id={e.id}
                             // setParam={setParam}
@@ -49,8 +50,7 @@ export default function ProfileContainer({param, setParam}) {
                             namePerson={e.namePerson} 
                             position={e.position}
                         />
-                    </SwiperSlide> 
-                        
+                    </SwiperSlide>                         
                 )}
                 </Swiper>
                 

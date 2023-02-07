@@ -1,79 +1,45 @@
-import f from '../img/f.jpg'
-import m from '../img/m.jpg'
+import w from '../img/w.jpg'
 
 export const CardsData = [
 
     {   
         id: 0,
         namePerson: 'Фарид' ,
-        position: 'Главный механик',
-        image: f,
+        position: 'Мастер приемщик',
+        image: '',
         phone: '77015013205' 
     },
 
     {   
         id: 1,
         namePerson: 'Филипп' ,
-        position: 'Менеджер',
-        image: m,
-        phone: '0000' 
+        position: 'Отдел запчастей',
+        image: '',
+        phone: '77476318012' 
     },
 
     {   
         id: 2,
-        namePerson: 'ty' ,
-        position: 'Директор',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 3,
-        namePerson: 'a' ,
-        position: 'Заместитель директора',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 4,
-        namePerson: 'b' ,
-        position: 'Бухгалтер',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 5,
-        namePerson: 'c' ,
-        position: 'nbkbl',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 6,
-        namePerson: 'q' ,
-        position: 'Склад',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 7,
-        namePerson: 'h' ,
+        namePerson: 'Петр' ,
         position: 'Гостиница',
         image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 8,
-        namePerson: 'k' ,
-        position: 'Отдел запчастей',
-        image: '',
-        phone: '89069681028' 
-    },
-    {   
-        id: 9,
-        namePerson: 'u' ,
-        position: 'Отдел ',
-        image: '', 
-        phone: '89069681028' 
+        phone: '77073648755' 
     },
 
+    {   
+        id: 3,
+        namePerson: 'Иван' ,
+        position: 'Директор',
+        image: '',
+        phone: '77015349610' 
+    },
+    
+    {   
+        id: 4,
+        namePerson: 'Милина' ,
+        position: 'Бухгалтерия',
+        image: w,
+        phone: '77012149723' 
+
+    }
 ]
